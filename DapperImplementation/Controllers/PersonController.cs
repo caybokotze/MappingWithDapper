@@ -15,10 +15,11 @@ namespace DapperImplementation.Controllers
             _configuration = configuration;
         }
         
+        [Route("all")]
         [HttpGet]
         public IActionResult Index()
         {
-            DataAccess da = new DataAccess(_configuration);
+            DataAccess da = new DataAccess();
             var list = da.GetPeople();
             return View("Index", list);
         }

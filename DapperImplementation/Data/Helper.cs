@@ -1,12 +1,15 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using System.Configuration;
+using Microsoft.Extensions.Configuration;
+using static System.Configuration.ConfigurationManager;
 
 namespace DapperImplementation.Data
 {
     public static class Helper
     {
-        public static string CnnVal(IConfiguration configuration, string name)
+        public static string CnnVal(string name = "DefaultConnection")
         {
-            return configuration.GetConnectionString(name);
+            var cString = ConfigurationManager.ConnectionStrings[name].ConnectionString;
+            return cString;
         }
     }
 }

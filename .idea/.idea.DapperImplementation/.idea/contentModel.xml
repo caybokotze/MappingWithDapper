@@ -21,6 +21,7 @@
             <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
           </e>
           <e p="Models" t="Include">
+            <e p="Address.cs" t="Include" />
             <e p="Person.cs" t="Include" />
           </e>
         </e>
@@ -35,6 +36,10 @@
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="SqlScripts" t="Include">
+          <e p="create_db.sql" t="Include" />
+          <e p="seed_data.sql" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
         <e p="Views" t="Include">
